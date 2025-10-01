@@ -144,6 +144,27 @@ img {
 
 /*=============== BLOB ===============*/
 /* Blob animate */
+.blob-animate{
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(180deg,
+                    var(--first-color-alt) 20%,
+                    var(--first-color-light) 100%);
+  border-radius: 50%;
+  filter: blur(35px);
+  z-index: -1;
+  position: absolute;
+  animation: animateBlob 5s linear infinite;
+}
+
+@keyframes animateBlob {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 
 
 /* Blob */
@@ -157,7 +178,52 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 
+.header{
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: linear-gradient(180deg,
+                    var(--body-color) 60%,
+                    hsla(240, 100%, 2%, 0) 100% );
+  z-index: var(--z-fixed);
+}
 
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1rem;
+}
+.nav-logo{
+  font-family: var(--second-font);
+  font-size: var(--font-medium);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  transition: color .2s ease-in-out;
+}
+.nav-logo:hover, .nav-logo:focus{
+  color: var(--first-color);
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+.nav-link{
+  font-family: var(--second-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+  color: var(--title-color);
+  transition: color .2s ease-in-out;
+}
+.nav-link:hover, .nav-link:focus{
+  color: var(--first-color);
+}
+.header .blob-animate{
+  top: -3rem;
+  left: -3rem;
+}
 /* Active link */
 
 
@@ -211,13 +277,32 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-
+@media screen and (max-width: 350px) {
+  .container{
+    margin-inline: 1rem;
+  }
+}
 
 /* For medium devices */
 
 
 /* For large devices */
-
+@media screen and (min-width: 1150px){
+  .container {
+    margin-inline: auto;
+  }
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    align-items: center;
+  }
+  .nav-logo{
+    align-self: initial;
+  }
+  .nav-links {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+}
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
 
