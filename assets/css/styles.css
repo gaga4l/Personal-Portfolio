@@ -131,13 +131,13 @@ img {
   padding-block: 5rem 1rem;
 }
 
-.section__title {
+.section-title {
   text-align: center;
   font-size: var(--h1-font-size);
   margin-bottom: 3rem;
 }
 
-.section__title span {
+.section-title span {
   color: var(--first-color);
 }
 
@@ -365,6 +365,33 @@ img {
 /*=============== BUTTON ===============*/
 
 /*=============== ABOUT ===============*/
+.about{
+  position: relative;
+  padding-top: 3rem;
+}
+
+.about-container{
+  position: relative;
+  
+}
+.about .section-title{
+  text-align: start;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.about-description{
+  font-size: var(--small-font-size);
+}
+.about-description b{
+  color: var(--first-color);
+}
+.about .button{
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: var(--body-color);
+}
 
 /*=============== PROJECTS ===============*/
 
