@@ -363,36 +363,80 @@ img {
 
 
 /*=============== BUTTON ===============*/
-
+.button{
+  background-color: var(--body-color);
+  border: 3px solid var(--first-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 8px 32px hsla(var(--hue), 60%, 64%, .5),
+              inset 8px -8px 30px var(--first-color-alt-2);
+  border-radius: 4rem;
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  transition: box-shadow .4s;
+}
+.button i {
+  font-weight: initial;
+  font-size: 1rem;
+}
+.button:hover, .button:focus{
+  box-shadow: 0 8px 48px hsla(var(--hue), 60%, 64%, .7),
+              inset 8px -8px 30px var(--first-color-alt-2);
+}
 /*=============== ABOUT ===============*/
 .about{
   position: relative;
-  padding-top: 3rem;
 }
 
 .about-container{
-  position: relative;
-  
-}
-.about .section-title{
-  text-align: start;
-  align-self: center;
-  margin-bottom: 0;
+  row-gap: 3rem;
+  overflow-y: clip;
+} 
+.about-container .section-title{
+  text-align: initial;
+  margin-bottom: 1.5rem;
 }
 
 .about-description{
-  font-size: var(--small-font-size);
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
 }
 .about-description b{
   color: var(--first-color);
-}
-.about .button{
-  width: 100px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: var(--body-color);
+  font-weight: var(--font-medium);
 }
 
+.about-image{
+  position: relative;
+  justify-content: center;
+}
+.about-image .blob-animate:nth-child(1){
+  top: 1.5rem;
+  left: 1rem;
+}
+.about-image .blob-animate:nth-child(2){
+  right: -.5rem;
+  bottom: .5rem;
+}
+
+.about-profile{
+  width: 220px;
+  justify-self: center;
+}
+
+.about-shadow{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 258px;
+  bottom: 1rem;
+  background: linear-gradient(180deg,
+              hsla(244, 100%, 2%, 0) 60%,
+              hsla(244, 100%, 2%) 95%);
+}
 /*=============== PROJECTS ===============*/
 
 /* Swiper class */
