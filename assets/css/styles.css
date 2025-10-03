@@ -172,7 +172,17 @@ img {
 }
 
 /* Blob */
-
+.blob{
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(180deg, 
+              var(--first-color) 0%,
+              var(--first-color-alt) 100%);
+  border-radius: 50%;
+  filter: blur(50px);
+  position: absolute;
+  z-index: -1;
+}
 /*=============== CUSTOM CURSOR ===============*/
 
 /* Hide the custom cursor */
@@ -440,37 +450,44 @@ img {
               hsla(244, 100%, 2%) 95%);
 }
 /*=============== PROJECTS ===============*/
-.project-description{
-  border: 1px solid var(--body-color);
+
+.projects .section-title{
+  text-align: initial;
+  margin-left: 1.5rem;
+}
+.project-card{
+  background-color: var(--container-color);
   border-radius: 2rem;
   padding: 1rem;
   position: relative;
   overflow: hidden;
 }
 
-.description-header{
+.card-header{
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .project-number{
   font-size:var(--biggest-font-size);
-  font-weight: var(--font-semi-bold);
 }
-.description-header h3{
+
+.card-header h3{
+  font-size: var(--h3-font-size);
   color: var(--text-color);
 }
 
 .project-title{
-  font-size: var(--h3-font-size);
-  margin-top: 1rem;
+  font-size: var(--h2-font-size);
+  margin-bottom: .7rem;
 }
 
 .project-subtitle{
   font-size: var(--small-font-size);
-  font-weight: var(--font-regular);
   color: var(--text-color);
-  margin-block: .5rem;
+  margin-block: .5rem
 }
 
 .tools-used{
@@ -479,19 +496,49 @@ img {
   margin-bottom: .5rem
 }
 .project-picture{
-  border-radius: 20px;
+  border-radius: 1rem;
 }
 
-.project-description .blob-animate{
-  width: 220px;
-  height: 220px;
-  right: -5rem;
-  bottom: -5rem;
+.project-card .blob{
+  z-index: 0;
+  right: -7.5rem;
+  bottom: 0;
 }
 
-.project-info{
+.card-header, .project-data, .project-image{
+  position: relative;
+  z-index: 1;
+}
+
+.project-button{
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background: var(--body-color);
+  border: 3px solid var(--first-color);
+  color: var(--title-color);
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  border-radius: 50%;
+  right: .75rem;
+  top: .75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s, box-shadow .3s;
+}
+.project-button:hover, .project-button:focus{
+  box-shadow: 0 0 24px var(--first-color);
+}
+.project-image:hover .project-button{
+  opacity: 1;
+  pointer-events: initial;
+}
+
+
+/* .project-info{
   display: flex;
-}
+} */
 /* Swiper class */
 
 /*=============== WORK ===============*/
