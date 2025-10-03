@@ -567,6 +567,12 @@ img {
 /*=============== WORK ===============*/
 .work-area{
   position: relative;
+  display: grid;
+  gap: 4rem;
+}
+.work-card{
+  display: grid;
+  row-gap: 1rem;
 }
 .work-header{
   display: flex;
@@ -590,7 +596,8 @@ img {
 }
 
 .work-content{
-  margin-block: 1rem;
+  display: grid;
+  row-gap: 4rem;
 }
 .work-data{
   display: flex;
@@ -639,7 +646,9 @@ img {
   display: grid;
 }
 /* Active tab */
-
+.work-button.work-active{
+  color: var(--first-color);
+}
 /*=============== SERVICES ===============*/
 
 /* Hide services info */
@@ -662,6 +671,12 @@ img {
   .container {
     margin-inline: 1rem;
   }
+  .project-card{
+    margin-inline: 1rem;
+  }
+  .work-header{
+    padding-inline: 1rem;
+  }
 
   /* .blob, .blob-animate, .home-image{
     width: 220px;
@@ -676,7 +691,8 @@ img {
     margin-inline: auto;
   }
 
-  .about-container {
+  .about-container, 
+  .work-container{
     grid-template-columns: 460px;
     justify-content: center;
   }
@@ -701,6 +717,11 @@ img {
   .project-card{
     width: 350px;
   } 
+
+  .work-header{
+    width: 330px;
+    justify-self: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -710,6 +731,23 @@ img {
   .about-container {
     width: 600px;
     justify-self: center;
+  }
+
+  .work-container{
+    grid-template-columns: 600px;
+  }
+  .work-area{
+    padding-left: 0;
+  }
+  .work-card{
+    grid-template-columns: repeat(2, 270px);
+    justify-content: center;
+    column-gap: 3rem;
+  }
+  .work-line{
+    left: 0;
+    right: 0;
+    margin-inline: auto;
   }
 }
 /* For large devices */
@@ -861,6 +899,18 @@ img {
     top: 1.5rem;
     right: 1.5rem;
   } 
+
+  .work-container{
+    grid-template-columns: 1050px;
+    row-gap: 3rem;
+  }
+  .work-content{
+    row-gap: 5rem;
+  }
+  .work-card{
+    grid-template-columns: repeat(2, 450px);
+    column-gap: 9rem;
+  }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
