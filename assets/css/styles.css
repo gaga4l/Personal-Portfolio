@@ -650,7 +650,63 @@ img {
   color: var(--first-color);
 }
 /*=============== SERVICES ===============*/
+.service-card{
+  background-color: var(--container-color);
+  padding: 2rem 1.5rem;
+  border-radius: 3rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.service-card .blob{
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: -5rem;
+}
+.service-title, .service-subtitle, .service-description, .service-skills{
+  position: relative;
+  z-index: 1;
+}
+.service-data, .service-info{
+  display: grid;
+  gap: .5rem;
+}
+.service-title{
+  font-size: var(--h1-font-size);
+}
+.service-subtitle{
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
+}
 
+.service-skills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.service-skill{
+  padding: .2rem .5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 2rem;
+  text-align: center;
+}
+.service-button{
+  background: none;
+  color: var(--title-color);
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--first-color);
+  border-radius: .3rem;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+}
+.service-button i{
+  font-size: 1.5rem;
+}
 /* Hide services info */
 
 /* Rotate icon */
