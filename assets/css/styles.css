@@ -553,17 +553,16 @@ img {
 }
 
 /* Swiper class */
-.project-info{
+.project-info {
   margin-inline: initial;
   padding-bottom: 2rem;
 }
-
 .projects .swiper-pagination-bullets {
   bottom: 0;
 }
 .projects .swiper-pagination-bullet {
   background-color: var(--first-color);
-  transition: opacity .4s;
+  transition: opacity 0.4s;
 }
 /*=============== WORK ===============*/
 
@@ -598,10 +597,6 @@ img {
     width: 220px;
     height: 220px;
   } */
-
-  .project-card{
-    padding-inline: 1rem;
-  }
 }
 
 /* For medium devices */
@@ -635,7 +630,7 @@ img {
 
   .project-card{
     width: 350px;
-  }
+  } 
 }
 
 @media screen and (min-width: 768px) {
@@ -778,14 +773,14 @@ img {
     padding-bottom: 4rem;
   }
 
-  /* .project-container{
+  .project-container{
     max-width: 1380px;
-  } */
-  /* .project-card{
+  } 
+   .project-card{
     width: 440px;
     padding: 2.5rem;
     border-radius: 4rem;
-  } */
+  }
   .project-subtitle{
     font-size: var(--normal-font-size);
   }
@@ -795,7 +790,7 @@ img {
   .project-button{
     top: 1.5rem;
     right: 1.5rem;
-  }
+  } 
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
