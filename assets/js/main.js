@@ -2,7 +2,7 @@
 
 
 /*=============== SWIPER PROJECTS ===============*/
-const projectsSwiper = new Swiper('.project-info', {
+const swiperProjects = new Swiper('.project-info', {
   loop: true,
   spaceBetween: 24,
   grabCursor: true,
@@ -11,12 +11,13 @@ const projectsSwiper = new Swiper('.project-info', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  }
+//   autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: false,
+//   }
 });
 
 /*=============== WORK TABS ===============*/
