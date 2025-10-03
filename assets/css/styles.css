@@ -440,7 +440,58 @@ img {
               hsla(244, 100%, 2%) 95%);
 }
 /*=============== PROJECTS ===============*/
+.project-description{
+  border: 1px solid var(--body-color);
+  border-radius: 2rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
 
+.description-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-number{
+  font-size:var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+}
+.description-header h3{
+  color: var(--text-color);
+}
+
+.project-title{
+  font-size: var(--h3-font-size);
+  margin-top: 1rem;
+}
+
+.project-subtitle{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
+  margin-block: .5rem;
+}
+
+.tools-used{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  margin-bottom: .5rem
+}
+.project-picture{
+  border-radius: 20px;
+}
+
+.project-description .blob-animate{
+  width: 220px;
+  height: 220px;
+  right: -5rem;
+  bottom: -5rem;
+}
+
+.project-info{
+  display: flex;
+}
 /* Swiper class */
 
 /*=============== WORK ===============*/
