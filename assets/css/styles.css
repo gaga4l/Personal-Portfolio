@@ -911,6 +911,12 @@ img {
     grid-template-columns: repeat(2, 450px);
     column-gap: 9rem;
   }
+  .work-title{
+    font-size: var(--bigger-font-size);
+  }
+  .work-subtitle{
+    font-size: var(--h3-font-size);
+  }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
