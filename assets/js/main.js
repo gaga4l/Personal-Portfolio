@@ -20,7 +20,14 @@ const swiperProjects = new Swiper(".project-info", {
 });
 
 /*=============== WORK TABS ===============*/
+const workBtn = document.querySelectorAll(".work-button")
 
+workBtn.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    const id = e.target.dataset.target
+    
+  })
+})
 /*=============== SERVICES ACCORDION ===============*/
 
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
