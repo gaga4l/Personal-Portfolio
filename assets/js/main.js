@@ -43,23 +43,45 @@ workBtn.forEach(btn => {
 const serviceBtn = document.querySelectorAll(".service-button")
 
 serviceBtn.forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    const parent = btn.parentNode
-    if (parent.classList.contains("service-open")){
-      parent.classList.remove("service-open")
-      parent.classList.add("service-close")
-    } else {
-      document.querySelectorAll(".service-info").forEach(el => {
-        if(el.classList.contains("service-open")){
-          el.classList.remove("service-open")
-          el.classList.add("service-close")
-        }
-        parent.classList.remove("service-close")
-        parent.classList.add("service-open")
-      })
+    btn.addEventListener("click", () => {
+    const serviceCard = document.querySelectorAll(".service-card"),
+          currentCard = btn.parentNode,
+          currentInfo = currentCard.querySelector(".service-info"),
+          isCardOpen = currentCard.classList.contains("service-open")
+
+    serviceCard.forEach(card => {
+      card.classList.replace("service-open", "service-close")
+
+      const info = card.querySelector(".service-info")
+            info.style.height = "0"
+    })
+
+    if (!isCardOpen){
+      currentCard.classList.replace("service-close", "service-open")
+      currentInfo.style.height = currentInfo.scrollHeight + "px"
     }
   })
 })
+
+
+// serviceBtn.forEach(btn => {
+//   btn.addEventListener("click", (e) => {
+//     const parent = btn.parentNode
+//     if (parent.classList.contains("service-open")){
+//       parent.classList.remove("service-open")
+//       parent.classList.add("service-close")
+//     } else {
+//       document.querySelectorAll(".service-card").forEach(el => {
+//         if(el.classList.contains("service-open")){
+//           el.classList.remove("service-open")
+//           el.classList.add("service-close")
+//         }
+//       })
+//       parent.classList.remove("service-close")
+//       parent.classList.add("service-open")
+//     }
+//   })
+// })
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
 
 /*=============== COPY EMAIL IN CONTACT ===============*/
