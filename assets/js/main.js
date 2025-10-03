@@ -2,7 +2,22 @@
 
 
 /*=============== SWIPER PROJECTS ===============*/
+const projectsSwiper = new Swiper('.project-info', {
+  loop: true,
+  spaceBetween: 24,
+  grabCursor: true,
+  speed: 600,
 
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  }
+});
 
 /*=============== WORK TABS ===============*/
 
