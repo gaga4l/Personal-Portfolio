@@ -40,7 +40,26 @@ workBtn.forEach(btn => {
   })
 })
 /*=============== SERVICES ACCORDION ===============*/
+const serviceBtn = document.querySelectorAll(".service-button")
 
+serviceBtn.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    const parent = btn.parentNode
+    if (parent.classList.contains("service-open")){
+      parent.classList.remove("service-open")
+      parent.classList.add("service-close")
+    } else {
+      document.querySelectorAll(".service-info").forEach(el => {
+        if(el.classList.contains("service-open")){
+          el.classList.remove("service-open")
+          el.classList.add("service-close")
+        }
+        parent.classList.remove("service-close")
+        parent.classList.add("service-open")
+      })
+    }
+  })
+})
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
 
 /*=============== COPY EMAIL IN CONTACT ===============*/

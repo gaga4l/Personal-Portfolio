@@ -145,6 +145,10 @@ img {
   overflow: hidden;
 }
 
+.display-none{
+  display: none;
+}
+
 /*=============== BLOB ===============*/
 /* Blob animate */
 .blob-animate {
@@ -655,15 +659,19 @@ img {
   padding: 2rem 1.5rem;
   border-radius: 3rem;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   position: relative;
   overflow: hidden;
 }
 .service-card .blob{
   position: absolute;
   z-index: 0;
-  top: -5rem;
-  left: -5rem;
+  top: -7.5rem;
+  left: -7.5rem;
+}
+.service-card .blob-2{
+  left: initial;
+  right: -7.5rem;
 }
 .service-title, .service-subtitle, .service-description, .service-skills{
   position: relative;
@@ -674,10 +682,10 @@ img {
   gap: .5rem;
 }
 .service-title{
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
 }
 .service-subtitle{
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   font-weight: var(--font-regular);
   color: var(--text-color);
 }
@@ -685,32 +693,54 @@ img {
 .service-skills{
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  align-items: center;
+  gap: .5rem .25rem;
 }
 .service-skill{
+  
+  background-color: var(--container-color);
   padding: .2rem .5rem;
-  border: 1px solid var(--text-color);
-  border-radius: 2rem;
+  border: 2px solid var(--text-color);
+  border-radius: 4rem;
+  font-size: var(--smaller-font-size);
+  font-family: var(--second-font);
   text-align: center;
 }
 .service-button{
-  background: none;
+  background-color: var(--body-color);
   color: var(--title-color);
   width: 2rem;
   height: 2rem;
-  border: 1px solid var(--first-color);
-  border-radius: .3rem;
+  border: 2px solid var(--first-color);
+  border-radius: .5rem;
   display: grid;
-  align-items: center;
+  place-items: center;
   cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 2;
 }
 .service-button i{
   font-size: 1.5rem;
+  transition: rotate .3s;
 }
+
+
 /* Hide services info */
+.service-close .service-info{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
 
+.service-info{
+  transition: height .3s, opacity .3s;
+}
 /* Rotate icon */
-
+.service-open .service-button{
+  rotate: -180deg;
+}
 /*=============== TESTIMONIALS ===============*/
 
 /* Infinite scroll animation */
