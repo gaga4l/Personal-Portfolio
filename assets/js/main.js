@@ -90,11 +90,20 @@ tracks.forEach(track => {
   for (const card of cards){
     track.appendChild(card.cloneNode(true))
   }
-
-  
 })
 /*=============== COPY EMAIL IN CONTACT ===============*/
+const copyBtn = document.getElementById("contact-button"),
+      copiedEmail = document.getElementById("contact-email").textContent
 
+copyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(copiedEmail).then(() => {
+    copyBtn.innerHTML = 'Email copied <i class="ri-check-line"></i>'
+
+    setTimeout(() => {
+      copyBtn.innerHTML = 'Copy email <i class="ri-file-copy-2-line"></i>'
+    }, 2000)
+  })
+})
 /*=============== CURRENT YEAR OF THE FOOTER ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
