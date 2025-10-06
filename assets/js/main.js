@@ -83,7 +83,16 @@ serviceBtn.forEach(btn => {
 //   })
 // })
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
+const tracks = document.querySelectorAll(".testmonial-content")
 
+tracks.forEach(track => {
+  const cards = [...track.children]
+  for (const card of cards){
+    track.appendChild(card.cloneNode(true))
+  }
+
+  
+})
 /*=============== COPY EMAIL IN CONTACT ===============*/
 
 /*=============== CURRENT YEAR OF THE FOOTER ===============*/

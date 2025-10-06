@@ -808,8 +808,30 @@ img {
   font-size: var(--h3-font-size);
 }
 
-/* Infinite scroll animation */
+.testmonial-content{
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+.testmonial-content:hover{
+animation-play-state: paused;
+}
 
+.testmonial-reverse{
+  flex-direction: row-reverse;
+  animation-direction: reverse;
+  animation-delay: -1s;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
 /*=============== CONTACT ===============*/
 
 /*=============== FOOTER ===============*/
