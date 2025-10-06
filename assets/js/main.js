@@ -105,7 +105,11 @@ copyBtn.addEventListener("click", () => {
   })
 })
 /*=============== CURRENT YEAR OF THE FOOTER ===============*/
+const textYear = document.getElementById("footer-year"),
+      currentYear = new Date().getFullYear()
 
+      // update the year to current year
+textYear.textContent = currentYear
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 /*=============== CUSTOM CURSOR ===============*/
