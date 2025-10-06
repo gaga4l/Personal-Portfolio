@@ -196,11 +196,11 @@ img {
 /*=============== HEADER & NAV ===============*/
 
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: linear-gradient(
+  background: linear-gradient(
     180deg,
     var(--body-color) 60%,
     hsla(240, 100%, 2%, 0) 100%
@@ -240,13 +240,17 @@ img {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--first-color);
+  text-shadow: 0 8px 16px var(--first-color);
 }
 .header .blob-animate {
   top: -3rem;
   left: -3rem;
 }
 /* Active link */
-
+.active-link{
+  color: var(--first-color);
+  text-shadow: 0 8px 16px var(--first-color);
+}
 /*=============== HOME ===============*/
 
 .home {
@@ -922,7 +926,18 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
-
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: hsl(240, 6%, 12%);
+  border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color: hsl(240, 6%, 20%);
+  border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(240, 6%, 24%);
+}
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {

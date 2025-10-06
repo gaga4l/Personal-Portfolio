@@ -109,9 +109,25 @@ const textYear = document.getElementById("footer-year"),
       currentYear = new Date().getFullYear()
 
       // update the year to current year
-textYear.textContent = currentYear
+textYear.innerHTML = `&#169; ${currentYear}`
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
 
+const scrollActive = () => {
+  const scrollY = window.scrollY
+
+  sections.forEach(section => {
+    const id = section.id,
+          top = section.offsetTop - 50,
+          height = section.offsetHeight,
+          link = document.querySelector('.nav-links a[href*=' + id + ']')
+
+    if (!link) return
+
+    link.classList.toggle('active-link', scrollY > top && scrollY <= top + height)
+  })
+}
+window.addEventListener("scroll", scrollActive)
 /*=============== CUSTOM CURSOR ===============*/
 
 /* Hide custom cursor on links */
