@@ -37,8 +37,8 @@ I know i'm no where near to what i want to build but atleast i have feeling that
 
 ### Links
 
-- Live Site URL: [Live](https://coolweatherapp.vercel.app/)
-- Repository URL: [Repo](https://github.com/gaga4l/Wheather-App)
+- Live Site URL: [Live](personalportfolio-anid.vercel.app)
+- Repository URL: [Repo](https://github.com/gaga4l/Personal-Portfolio-Template)
 
 
 ## My process
