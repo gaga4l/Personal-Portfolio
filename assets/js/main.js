@@ -1,31 +1,25 @@
 /*=============== HOME SPLIT TEXT ===============*/
 const { animate, text, stagger } = anime;
 
-const { chars: chars1 } = text.split('.home-profession-1', {
-  chars: true
+const { chars: chars1 } = text.split(".home-profession-1", {
+  chars: true,
 });
-const { chars: chars2 } = text.split('.home-profession-2', {
-  chars: true
+const { chars: chars2 } = text.split(".home-profession-2", {
+  chars: true,
 });
 
 animate(chars1, {
-  y: [
-    { to: ['100%', '0%'] },
-    { to: '-100%', delay: 4000, ease: 'in(3)' }
-  ],
+  y: [{ to: ["100%", "0%"] }, { to: "-100%", delay: 4000, ease: "in(3)" }],
   duration: 900,
-  ease: 'out(3)',
+  ease: "out(3)",
   delay: stagger(80),
   loop: true,
 });
 
 animate(chars2, {
-  y: [
-    { to: ['100%', '0%'] },
-    { to: '-100%', delay: 4000, ease: 'in(3)' }
-  ],
+  y: [{ to: ["100%", "0%"] }, { to: "-100%", delay: 4000, ease: "in(3)" }],
   duration: 900,
-  ease: 'out(3)',
+  ease: "out(3)",
   delay: stagger(80),
   loop: true,
 });
@@ -180,17 +174,16 @@ document.addEventListener("mousemove", (e) => {
   cursorMove();
 });
 
-
 /* Hide custom cursor on links */
-const a = document.querySelectorAll("a")
+const a = document.querySelectorAll("a");
 
-a.forEach(element => {
+a.forEach((element) => {
   element.addEventListener("mouseover", () => {
-    cursor.classList.add("hide-cursor")
-  })
+    cursor.classList.add("hide-cursor");
+  });
   element.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hide-cursor")
-  })
+    cursor.classList.remove("hide-cursor");
+  });
 });
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
@@ -199,12 +192,14 @@ const sr = ScrollReveal({
   duration: 2000,
   delay: 300,
   reset: true,
-})
+});
 
-sr.reveal(".home-image, work-container, .project-container, .work-container, .testmonial-container, .contact-container")
-sr.reveal(".home-data", {delay: 900, origin: "bottom"})
-sr.reveal(".home-info", {delay: 1200, origin: "bottom"})
-sr.reveal(".home-social, .home-cv", {delay: 1500})
-sr.reveal(".about-data", {origin: "left"})
-sr.reveal(".about-image", {origin: "right"})  
-sr.reveal(".service-card", {interval: 100})  
+sr.reveal(
+  ".home-image, work-container, .project-container, .work-container, .testmonial-container, .contact-container"
+);
+sr.reveal(".home-data", { delay: 900, origin: "bottom" });
+sr.reveal(".home-info", { delay: 1200, origin: "bottom" });
+sr.reveal(".home-social, .home-cv", { delay: 1500 });
+sr.reveal(".about-data", { origin: "left" });
+sr.reveal(".about-image", { origin: "right" });
+sr.reveal(".service-card", { interval: 100 });

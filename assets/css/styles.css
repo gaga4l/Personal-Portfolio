@@ -190,7 +190,7 @@ img {
   z-index: -1;
 }
 /*=============== CUSTOM CURSOR ===============*/
-.cursor{
+.cursor {
   position: fixed;
   left: 0;
   top: 0;
@@ -202,14 +202,11 @@ img {
   box-shadow: 0 0 30px var(--first-color);
   mix-blend-mode: difference;
   pointer-events: none;
-  transition: transform .2 ease-in-out,
-              left .2s ease-in-out,
-              top .2s ease-in-out,
-              width .3s,
-              height .3s;
+  transition: transform 0.2 ease-in-out, left 0.2s ease-in-out,
+    top 0.2s ease-in-out, width 0.3s, height 0.3s;
 }
 /* Hide the custom cursor */
-.hide-cursor{
+.hide-cursor {
   width: 0;
   height: 0;
 }
@@ -267,7 +264,7 @@ img {
   left: -3rem;
 }
 /* Active link */
-.active-link{
+.active-link {
   color: var(--first-color);
   text-shadow: 0 8px 16px var(--first-color);
 }
@@ -862,100 +859,101 @@ img {
   }
 }
 /*=============== CONTACT ===============*/
-.contact-container{
+.contact-container {
   row-gap: 4rem;
   padding-bottom: 2rem;
 }
-.contact .section-title{
+.contact .section-title {
   margin-bottom: 1rem;
 }
-.contact-data{
+.contact-data {
   text-align: center;
 }
-.contact-description{
+.contact-description {
   font-family: var(--second-font);
   margin-bottom: 1.5rem;
 }
-.contact-email{
+.contact-email {
   display: none;
 }
-.contact-button{
+.contact-button {
   cursor: pointer;
 }
-.contact-content{
+.contact-content {
   row-gap: 3rem;
 }
-.contact-info{
+.contact-info {
   text-align: center;
   row-gap: 1rem;
 }
-.contact-title{
+.contact-title {
   color: var(--first-color);
   font-size: var(--h3-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
-.contact-address{
+.contact-address {
   color: var(--title-color);
   font-style: normal;
   font-weight: var(--font-medium);
 }
-.contact-links{
+.contact-links {
   display: grid;
   grid-template-columns: max-content;
   justify-content: center;
-  row-gap: .25rem;
+  row-gap: 0.25rem;
 }
-.contact-link{
+.contact-link {
   color: var(--title-color);
   font-weight: var(--font-medium);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: .5rem;
-  transition: transform .3s, color .3s;
+  column-gap: 0.5rem;
+  transition: transform 0.3s, color 0.3s;
 }
-.contact-link i{
+.contact-link i {
   font-size: 1.5rem;
 }
-.contact-link:hover, .contact-link:focus{
-  transform: translateX(.35rem);
+.contact-link:hover,
+.contact-link:focus {
+  transform: translateX(0.35rem);
   color: var(--text-color);
 }
 
 /*=============== FOOTER ===============*/
-.footer{
+.footer {
   position: relative;
   padding-block: 4rem 2rem;
   text-align: center;
   row-gap: 1rem;
   overflow: hidden;
 }
-.footer .blob-animate{
+.footer .blob-animate {
   right: -3rem;
   bottom: -3rem;
 }
-.footer-copy{
+.footer-copy {
   color: var(--title-color);
 }
-.footer-copy span{
+.footer-copy span {
   color: var(--first-color);
 }
-.footer-year span{
+.footer-year span {
   font-family: var(--second-font);
 }
 
 /*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar{
-  width: .6rem;
+::-webkit-scrollbar {
+  width: 0.6rem;
   background-color: hsl(240, 6%, 12%);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: hsl(240, 6%, 20%);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: hsl(240, 6%, 24%);
 }
 /*=============== BREAKPOINTS ===============*/
@@ -1288,45 +1286,45 @@ img {
   .testmonial-number {
     font-size: var(--normal-font-size);
   }
-  .contact{
-     padding-block: 9rem 4rem;
+  .contact {
+    padding-block: 9rem 4rem;
   }
-  .contact-container{
+  .contact-container {
     row-gap: 8rem;
   }
-  .contact-description{
+  .contact-description {
     font-size: var(--h2-font-size);
   }
-  .contact-content{
+  .contact-content {
     grid-template-columns: repeat(3, 1fr);
   }
-  .contact-info{
+  .contact-info {
     row-gap: 1.5rem;
     justify-self: flex-start;
   }
-  .contact-write{
+  .contact-write {
     justify-self: flex-end;
   }
-  .contact-title{
-    margin-bottom: .75rem;
+  .contact-title {
+    margin-bottom: 0.75rem;
   }
-  .contact-links{
-    row-gap: .5rem;
+  .contact-links {
+    row-gap: 0.5rem;
   }
-  .contact-link{
+  .contact-link {
     font-size: 1.25rem;
   }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
 @media screen and (min-width: 2048px) {
-  body{
+  body {
     zoom: 1.4;
   }
 }
 /* Custom cursor is hidden for mobile devices */
 @media (pointer: coarse) {
-  .cursor{
+  .cursor {
     display: none;
   }
 }
